@@ -1,0 +1,47 @@
+html,
+body,
+header,
+.views {
+  height: 100%;
+}
+
+@media (max-width: 740px) {
+  html,
+  body,
+  header,
+  .views {
+    height: 1100px;
+  }
+}
+@media (min-width: 800px){
+  html,
+  body,
+  header,
+  .views {
+    height: 700px;
+  }
+}
+
+.top-nav-collapse {
+  background-color: #ffffff !important;
+}
+
+.navbar:not(.top-nav-collapse) {
+  background: transparent !important;
+}
+
+@media (min-width: 800px) {
+ .navbar:not(.top-nav-collapse) {
+  background: white !important;
+ }
+}
+
+h6 {
+  line-height: 1.7;
+}
+.navbar-brand img{
+  height: 60px;
+}
+.container-card{
+    padding-top: 6em;
+}
