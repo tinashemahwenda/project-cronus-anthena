@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}My Shop{% endblock %}</title>
+    <title></title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
     <link rel="stylesheet" href="{% static 'css/mdb.css' %}">
@@ -17,7 +17,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
           <div class="container">
             <a class="navbar-brand mb-1" href="#">
-              <img src="img/sploramart-logo.png" alt="">
+              <img src="{% static 'images/sploramart-logo.png' %}" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
               aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
@@ -113,7 +113,12 @@
         </div>
         <!-- Full Page Intro -->
       </header>
-      {% block content %}
-      {% endblock %}
+      <div class="container">
+        {% block content %}
+        {% endblock %}
+      </div>
+        
+   
+      
 </body>
 </html>
