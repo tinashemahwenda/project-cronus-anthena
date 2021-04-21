@@ -1,6 +1,7 @@
 {% extends 'shop/base.html' %}
 
 {% block content %}
+<<<<<<< Updated upstream
 <section>
   <div class="banner">
       <div class="banner-text">
@@ -44,3 +45,38 @@
   
 </div>
 {% endblock %}
+=======
+<h1>{% if category %}{{category.name}}{% else %}Products{% endif %}</h1>
+<div class="row">
+    {% for product in products %}
+        <div class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
+            <!-- Card -->
+            <div class="card align-items-center">
+              <!-- Card image -->
+              <div class="view overlay">
+                <img src="{{product.image.url}}" class="card-img-top"
+                  alt="">
+                <a>
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+              <!-- Card image -->
+              <!-- Card content -->
+              <div class="card-body text-center">
+                <!-- Category & Title -->
+                <a href="{{product.get_absolute_url}}" class="grey-text">
+                  <h6>{{product.name}}</h6>
+                </a>
+                <h5 class="font-weight-bold blue-text mb-0">
+                  <strong>${{product.price}}</strong>
+                </h5>
+              </div>
+              <!-- Card content -->
+            </div>
+            <!-- Card -->
+          </div>
+    
+    {% endfor %}
+</div>
+{% endblock %}
+>>>>>>> Stashed changes
