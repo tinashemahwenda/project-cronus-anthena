@@ -2,163 +2,20 @@
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
 }
-.container{
-    margin-left: 5em;
-    margin-right: 7em;
-    margin-top: 5em;
-    
-}
-nav ul {
-    list-style-type: none;
-    float: right;
-    margin-top: .5em;
-}
-nav ul li{
-    display: block;
-    float: left;
-    padding: 1em;
-    
-}
-nav ul li a{
-    text-decoration: none;
-    color: rgb(61, 56, 56);
-    font-weight: bold;
-    font-size: .9em;
-
-}
-.login-btn{
-    background-color: dodgerblue;
-    cursor: pointer;
-    border: 1px solid dodgerblue;
-    font-weight: bold;
-    font-size: .9em;
-    color: white;
-}
-.banner{
+.jumbotron{
+    background-color: white;
     width: 100%;
-    height: 60vh;
+}
+.jumbotron-image{
     background-image: url('../images/banner.jpg');
+    background-position: right;
     background-size: contain;
     background-repeat: no-repeat;
-    background-position-x: right;
-    margin-top: 2em;
 }
-.grey-text{
-    color: #666;
+card-links{
+    padding-left: 1em;
 }
-.blue-text{
-    color: dodgerblue;
-}
-.banner h2{
-    font-size: 3em;
-    position: relative;
-    text-transform: uppercase;
-    font-family: lato;
-}
-.banner button{
-    padding: 1em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-}
-.banner p{
-    font-size: 1.5em;
-    font-family: lato;
-}
-.banner .banner-text{
-    position: relative;
-    top: 4rem;
-    margin-left: 4em;
-}
-.product-area{
-    width: 100%;
-    padding: 1em;
-    
-}
-.blue-label{
-    padding: 1em;
-    background-color: dodgerblue;
-    width: 15em;
-    position: relative;
-    top: 4.3em;
-
-}
-.blue-label h2{
-    font-weight: 500;
-    color: white;
-    font-size: 1em;
-    text-align: center;
-    font-family: lato;
-}
-.search{
-    padding: 1em;
-    float: right;
-}
-.search input{
-    font-size: .7em;
-    padding: 1.5em;
-    width: 20em;
-    text-align: center;
-    border-radius: 4em;
-    border: solid black .1em;
-}
-
-.product-sidebar{
-    padding: 2em;
-    margin-top: 7.8em;
-    width: 12.8em;
-    border: .1em solid gray;
-}
-.product-sidebar ul{
-    list-style-type: none;
-    margin-top: .5em;
-}
-.product-sidebar ul li{
-    padding: 1em;
-    margin-top: 1em;
-    cursor: pointer;
-}
-.active{
-    background-color: dodgerblue;
-    color: white;
-}
-.product-sidebar ul li:hover{
-    background-color: dodgerblue;
-    color: white;
-}
-.product-card{
-    width: 17em;
-    height: 50vh;
-    border: 1px solid gray;
-    position: relative;
-    margin-left: .8em;
-    display: inline-block;
-    margin-bottom: 1em;
-}
-.product-card img{
-    width: 80%;
-    padding: 1.5em;
-    
-}
-.price-tag{
-    padding: .5em;
-    background-color:dodgerblue;
-    width: 5em;
-    color: white;
-    font-weight: 600;
-    margin-top: 1em;
-    
-}
-.product-card h2{
-    color: dodgerblue;
-    text-align: center;
-}
-.product-section{
-    width: 70%;
-    height: 100vh;
-    position: absolute;
-    display: inline;
-    left: 29%;
-    top: 120%;
+.card-links:hover{
+    text-decoration: none;
 }

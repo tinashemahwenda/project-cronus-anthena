@@ -1,47 +1,34 @@
 {% extends 'shop/base.html' %}
-
 {% block content %}
-<section>
-  <div class="banner">
-      <div class="banner-text">
-          <h2 class="blue-text">Click</h2>
-          <h2 class="blue-text">Buy</h2>
-          <h2 class="grey-text">Relax</h2>
-          <button class="login-btn">SHOP NOW</button>
-          <p class="blue-text">Get 30% on every purchase this winter!</p>
-      </div>     
-  </div>
-</section>
-<div class="product-area">
-  <div class="blue-label">
-      <h2>RECOMENDED FOR YOU</h2>
-  </div>
-  <div class="search">
-      <input type="search" placeholder="LOOKING FOR SOMETHING..?" id="">
-  </div>
-  <div class="product-sidebar">
-      <h3 class="blue-text">Categories</h3>
-      <ul>
-          <li class="active sidebar-option">All</li>
-          <li class="sidebar-option">Food</li>
-          <li class="sidebar-option">Cleaning</li>
-          <li class="sidebar-option">Cosmetics</li>
-          <li class="sidebar-option">Farming</li>
-          <li class="sidebar-option">+more</li>
-      </ul>
-      <h3 class="blue-text">Filters</h3>
-  </div>
-  <div class="product-section">
-    {% for product in products %}
-      <div class="product-card">
-          <div class="price-tag">${{product.price}}</div>
-          <img src="{{product.image.url}}" class="product-image" alt="">
-          <h2 class="product-title">{{product.name}}</h2>
+<div class="jumbotron jumbotron-image jumbotron-fluid" style="height: 70vh;"> 
+  <div class="container mt-5 ml-5 pt-4">
+      <div class="row">
+          <div class="col-lg-6 col-md-8 col-sm-12">
+              <h1 class="display-5"><strong>Click</strong></h1>
+              <h1 class="display-5"><strong>Buy</strong></h1>
+              <h1 class="display-5 text-primary"><strong>Relax</strong></h1>
+              <a href="#" class="btn btn-primary">Shop Now</a>
+              <p class="lead text-primary"><strong>30% discount on every purchase this winter!</strong> </p>
+          </div>
       </div>
-      {% endfor %}
-      
   </div>
-  
+</div>
+<h1 class="text-center m-5">Explore the mart</h1>
+<div class="container-fluid">
+  <div class="row ml-3">
+        <div class="col-lg-3 ">
+            <a class="card-links " href="#">
+                <div class="card text-center" style="width: 18rem;">
+                    <img src="images/02_galaxys21_ultra_phantom_titanium_back.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">RoboCleaner</h5>
+                        <p class="card-text"></p>
+                        <p class="text-dark">$5000</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
 </div>
 {% endblock %}
 
