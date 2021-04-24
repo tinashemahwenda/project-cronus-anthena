@@ -14,20 +14,29 @@
   </div>
 </div>
 <h1 class="text-center m-5">Explore the mart</h1>
+<nav class="navbar navbar-light bg-white">
+    <h3 class="badge badge-primary ml-5 ">Recommended For You</h3>
+    <form class="form-inline ml-auto mr-5">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </nav>
 <div class="container-fluid">
-  <div class="row ml-3">
-        <div class="col-lg-3 ">
+  <div class="row ml-3 justify-content-center">
+      {% for product in products %}
+        <div class="col-lg-3 col-md-12 col-sm-12 mt-3 ">
             <a class="card-links " href="#">
-                <div class="card text-center" style="width: 18rem;">
-                    <img src="images/02_galaxys21_ultra_phantom_titanium_back.jpg" class="card-img-top" alt="...">
+                <div class="card text-center">
+                    <img src="{{product.image.url}}" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title text-center">RoboCleaner</h5>
+                        <h5 class="card-title text-center">{{product.name}}</h5>
                         <p class="card-text"></p>
-                        <p class="text-dark">$5000</p>
+                        <p class="text-dark">${{product.price}}</p>
                     </div>
                 </div>
             </a>
         </div>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}
