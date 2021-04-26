@@ -1,11 +1,12 @@
 from decimal import Decimal
-from django.config import settings
+from django.conf import settings
 from shop.models import Product
 
 
 class Cart(object):
     def __init__(self, request):
-        self.session = request.sessioncart = self.session.get(settings.CART_SESSION_ID)
+        self.session = request.session 
+        cart = self.session.get(settings.CART_SESSION_ID)
         if not cart:
             cart = self.session[settings.CART_SESSION_ID] = {}
 
@@ -19,7 +20,7 @@ class Cart(object):
         self.save()
 
     def save(self):
-        self.session.modeified = True
+        self.session.modified = True
 
     def remove(self, product):
         product_id = str(product_id)
