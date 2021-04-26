@@ -25,7 +25,7 @@
   <div class="row ml-3 justify-content-center">
       {% for product in products %}
         <div class="col-lg-3 col-md-12 col-sm-12 mt-3 ">
-            <a class="card-links " href="#">
+            <a class="card-links " href="{{product.get_absolute_url}}">
                 <div class="card text-center">
                     <img src="{{product.image.url}}" class="card-img-top" alt="...">
                     <div class="card-body">
